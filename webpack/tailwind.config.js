@@ -1,6 +1,4 @@
 module.exports = {
-
-
   /*
    * This project now uses v3 of Tailwind, if you don't know what that means, then don't worry about it.
    * If you're familiar with the way a previous version worked, Tailwind no longer purges CSS, rather it uses a
@@ -23,29 +21,20 @@ module.exports = {
        *
        * https://tailwindcss.com/docs/customizing-colors#custom-colors
        * */
-      blue: {
-        light: "#6495ED", // text-blue-light
-        DEFAULT: "#0047AB", // text-blue
-        dark: "#00008B", // text-blue-dark
-        100: "#ff0000", // text-blue-100
-      },
       pink: {
-        light: "#ff7ce5",
-        DEFAULT: "#ff49db",
-        dark: "#ff16d1",
+        DEFAULT: "#D68497",
       },
-      gray: {
-        darkest: "#1f2d3d",
-        dark: "#3c4858",
-        DEFAULT: "#c0ccda",
-        light: "#e0e6ed",
-        lightest: "#f9fafc",
+      green: {
+        DEFAULT: "#79A6A3",
+      },
+      yellow: {
+        DEFAULT: "#F2D892",
       },
       white: {
-        DEFAULT: "#ffffff",
+        DEFAULT: "#F6F3EF",
       },
       black: {
-        DEFAULT: "#000000",
+        DEFAULT: "#383838",
       },
     },
   },
