@@ -9,8 +9,8 @@
 */
 
 /* Color Settings */
-$background-color: #222222;
-$color: #ffffff;
+$background-color: #383838;
+$color: #f6f3ef;
 
 /*
  * General Settings
@@ -153,7 +153,7 @@ $color: #ffffff;
 
 @media screen and (min-width: 40em) {
   .footer {
-    padding: 50px 50px 60px;
+    padding: 20px;
   }
 
   .footer-left {
@@ -207,8 +207,6 @@ $color: #ffffff;
 
 @media screen and (min-width: 64em) {
   .footer {
-    padding-top: 10px;
-
     img {
       margin-top: 20px;
       width: 30%;
