@@ -12,14 +12,14 @@
 /* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-max-id, no-duplicate-selectors */
 
 // Navbar quick settings
-$content-width: 1000px; // How wide or narrow do you want the bar to be?
+$content-width: 2000px; // How wide or narrow do you want the bar to be?
 $breakpoint: 799px; // When do you want to switch from mobile to desktop?
 $nav-height: 70px; // How tall do you want the navbar to be?
-$nav-background: #262626; // What background color do you want?
-$nav-font-color: #ffffff; // What primary font color?
-$link-hover-color: #2581dc; // What color when you hover?
-$button-color: #ff5555; // What background color do you want the button to be?
-$button-hover-color: #e03a3a; // What hover color do you want the button to be?
+$nav-background: #d68497; // What background color do you want?
+$nav-font-color: #f6f3ef; // What primary font color?
+$link-hover-color: #d5748c; // What color when you hover?
+$button-color: #f6f3ef; // What background color do you want the button to be?
+$button-hover-color: #d9d5d2; // What hover color do you want the button to be?
 
 // Outer navigation wrapper
 .navigation {
@@ -44,6 +44,7 @@ $button-hover-color: #e03a3a; // What hover color do you want the button to be?
   // If you change your navbar height, you may need to adjust this.
   img {
     height: 70px;
+    padding: 10px;
   }
 }
 
@@ -51,6 +52,7 @@ $button-hover-color: #e03a3a; // What hover color do you want the button to be?
 .nav-container {
   margin: 0 auto;
   max-width: $content-width;
+  text-transform: uppercase;
 }
 
 // Navigation
@@ -210,9 +212,10 @@ nav {
   li:last-of-type {
     align-self: center;
     background-color: $button-color;
-    color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     cursor: pointer;
     letter-spacing: 1px;
+    margin-right: 0;
     text-align: center;
     text-transform: uppercase;
     transition: all 0.1s ease-in-out;
@@ -220,10 +223,13 @@ nav {
 
   li:last-of-type a {
     background-color: rgba(0, 0, 0, 0);
+    color: #333333;
+    font-size: 1.1em;
   }
 
   li:last-of-type:hover a {
     background-color: rgba(0, 0, 0, 0);
+    color: #333333;
   }
 
   li:last-of-type:hover {
@@ -236,13 +242,14 @@ nav {
 
   @media screen and (min-width: $breakpoint) {
     li:last-of-type {
-      border-radius: 10px;
-      margin-left: 6px;
+      border-radius: 50px;
+      margin-right: 10px;
       margin-top: 15px;
     }
 
     li:last-of-type a {
       background-color: rgba(0, 0, 0, 0);
+      font-size: 0.8em;
     }
 
     li:last-of-type:hover a {
