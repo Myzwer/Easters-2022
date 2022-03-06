@@ -8,6 +8,11 @@
  *
  */
 
+//Need this class because wp backend uses it and if I don't have it in the css it'll get purged out by tailwind.
+.text-yellow {
+  color: #f2d892;
+}
+
 // Not my class names, sooo....
 /* stylelint-disable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
 
