@@ -2,30 +2,83 @@
  * Wordpress
  * =================================
  * Sometimes wordpress generates things and tailwind can't hit it. This edits those.
- * - Single - Category
- * - Privacy Policy Styles
+ * - Forms - Gravity Forms
  *
  *
  *
  */
 
-.category {
-  ul {
-    display: inline-block;
-  }
+// Not my class names, sooo....
+/* stylelint-disable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
 
-  li {
-    background-color: #0a4b78;
-    padding: 10px;
-  }
+.gform_title,
+.gform_description {
+  display: none;
 }
+
+.gform_body input,
+.gform_body textarea {
+  background-color: #f6f3ef;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #383838;
+}
+
+.gform_body input:focus {
+  border: 1px solid #d68497;
+  outline: none !important;
+}
+
+.gfield_required {
+  color: #383838;
+}
+
+.gform_body input::placeholder {
+  color: #383838;
+  opacity: 0.5;
+}
+
+.gform_button {
+  background-color: #f2d892 !important;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #383838;
+  padding: 5px 30px;
+}
+
+/* stylelint-enable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
 
 /* Privacy Policy Page */
 // WP generates this, so in order for it to look right I have to manually style it.
 .privacy-policy {
+  h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    padding-top: 10px;
+  }
+
   h2 {
     font-size: 2em;
     font-weight: 800;
     padding-top: 10px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 800;
+    padding-top: 10px;
+  }
+
+  p {
+    padding-bottom: 8px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-bottom: 8px;
+  }
+
+  strong {
+    font-weight: 800;
   }
 }
