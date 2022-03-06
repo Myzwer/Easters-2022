@@ -165,7 +165,7 @@ get_header(); ?>
                 <?php if (have_rows('info_block_1')): ?>
                     <?php while (have_rows('info_block_1')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
-                            <h2 class="text-6xl"><?php the_sub_field('title'); ?></h2>
+                            <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
                         </div>
                     <?php endwhile; ?>
@@ -173,7 +173,7 @@ get_header(); ?>
                 <?php if (have_rows('info_block_2')): ?>
                     <?php while (have_rows('info_block_2')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
-                            <h2 class="text-6xl"><?php the_sub_field('title'); ?></h2>
+                            <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
                             <a href="<?php the_sub_field('button_link'); ?>">
                                 <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
@@ -187,7 +187,7 @@ get_header(); ?>
                 <?php if (have_rows('info_block_3')): ?>
                     <?php while (have_rows('info_block_3')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
-                            <h2 class="text-6xl"><?php the_sub_field('title'); ?></h2>
+                            <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
                         </div>
                     <?php endwhile; ?>
