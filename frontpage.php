@@ -39,15 +39,15 @@ get_header(); ?>
                             <?php endwhile; ?>
                         <?php endif; ?>
 
-                       <!-- <?php /*if (have_rows('secondary_button')): */?>
-                            <?php /*while (have_rows('secondary_button')): the_row(); */?>
-                                <a href="<?php /*the_sub_field('button_link'); */?>">
+                        <!-- <?php /*if (have_rows('secondary_button')): */ ?>
+                            <?php /*while (have_rows('secondary_button')): the_row(); */ ?>
+                                <a href="<?php /*the_sub_field('button_link'); */ ?>">
                                     <button class="mx-auto lg:mx-0 w-full border-black border-2 text-black font-bold rounded-full my-1 md:my-1 py-3 px-6 md:px-8 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                        <?php /*the_sub_field('button_text'); */?>
+                                        <?php /*the_sub_field('button_text'); */ ?>
                                     </button>
                                 </a>
-                            <?php /*endwhile; */?>
-                        --><?php /*endif; */?>
+                            <?php /*endwhile; */ ?>
+                        --><?php /*endif; */ ?>
                     </div>
                 </div>
             </div>
@@ -167,6 +167,13 @@ get_header(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
                             <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
+                            <?php if (get_sub_field('button_link')): ?>
+                                <a href="<?php the_sub_field('button_link'); ?>">
+                                    <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                        <?php the_sub_field('button_text'); ?>
+                                    </button>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
@@ -175,11 +182,13 @@ get_header(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
                             <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
-                            <a href="<?php the_sub_field('button_link'); ?>">
-                                <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
-                                    <?php the_sub_field('button_text'); ?>
-                                </button>
-                            </a>
+                            <?php if (get_sub_field('button_link')): ?>
+                                <a href="<?php the_sub_field('button_link'); ?>">
+                                    <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                        <?php the_sub_field('button_text'); ?>
+                                    </button>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
@@ -189,6 +198,13 @@ get_header(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
                             <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
+                            <?php if (get_sub_field('button_link')): ?>
+                                <a href="<?php the_sub_field('button_link'); ?>">
+                                    <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                        <?php the_sub_field('button_text'); ?>
+                                    </button>
+                                </a>
+                            <?php endif; ?>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
@@ -198,15 +214,14 @@ get_header(); ?>
 
     <div class="bg-green pb-10">
         <div class="lg:max-w-4xl lg:mx-auto pt-10">
-            <div class="grid grid-cols-12 gap-4 px-5 text-white">
+            <div class="grid grid-cols-12 gap-6 px-5 text-white">
                 <div class="col-span-12 md:col-span-6">
-                    <h3 class="text-2xl uppercase">Who We Are</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur aut corporis
-                        dolorem, ea eaque eius eveniet iusto nam, nihil quas, unde voluptatum. Commodi doloremque, ipsa
-                        modi saepe sit voluptas.</p>
+                    <h3 class="text-2xl uppercase pb-5 "><?php the_field('about_title'); ?></h3>
+                    <p><?php the_field('about_copy'); ?></p>
                 </div>
 
                 <div class="col-span-12 md:col-span-6">
+                    <h3 class="text-2xl uppercase pb-5"><?php the_field('contact_title'); ?></h3>
                     <?php if (have_posts()) : while (have_posts()) : the_post();
                         the_content();
                     endwhile;
