@@ -25,6 +25,8 @@ $button-hover-color: #d9d5d2; // What hover color do you want the button to be?
 .navigation {
   background: $nav-background;
   height: $nav-height;
+  position: relative;
+  z-index: 10;
 }
 
 // Logo and branding
