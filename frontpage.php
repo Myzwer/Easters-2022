@@ -39,15 +39,15 @@ get_header(); ?>
                             <?php endwhile; ?>
                         <?php endif; ?>
 
-                        <!-- <?php /*if (have_rows('secondary_button')): */ ?>
-                            <?php /*while (have_rows('secondary_button')): the_row(); */ ?>
-                                <a href="<?php /*the_sub_field('button_link'); */ ?>">
+                         <?php if (have_rows('secondary_button')): ?>
+                            <?php while (have_rows('secondary_button')): the_row(); ?>
+                                <a href="<?php the_sub_field('button_link'); ?>">
                                     <button class="mx-auto lg:mx-0 w-full border-black border-2 text-black font-bold rounded-full my-1 md:my-1 py-3 px-6 md:px-8 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                        <?php /*the_sub_field('button_text'); */ ?>
+                                        <?php the_sub_field('button_text'); ?>
                                     </button>
                                 </a>
-                            <?php /*endwhile; */ ?>
-                        --><?php /*endif; */ ?>
+                            <?php endwhile; ?>
+                        <?php endif;  ?>
                     </div>
                 </div>
             </div>
