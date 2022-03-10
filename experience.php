@@ -47,7 +47,7 @@ get_header(); ?>
                                     </button>
                                 </a>
                             <?php endwhile; ?>
-                        <?php endif;  ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -63,12 +63,26 @@ get_header(); ?>
         <div class="lg:mx-auto">
             <div class="grid grid-cols-12 gap-4 text-black">
                 <div class="col-span-12 lg:col-span-9 px-5 py-20 md:p-10 md:my-24">
-                    <h1 class="uppercase leading-relaxed text-5xl md:text-8xl xl:text-9xl text-white">Are you ready to experience life change?</h1>
+                    <h1 class="uppercase leading-relaxed text-5xl md:text-8xl xl:text-9xl text-white">Are you ready to
+                        experience life change?</h1>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="bg-black">
+        <div class="px-4 py-10">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12">
+                    <div class="md:text-center">
+                        <h1 class="text-white text-4xl uppercase">
+                            WHat to expect
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <div class="bg-white pb-10">
@@ -141,8 +155,6 @@ get_header(); ?>
             </div>
 
 
-
-
             <!-- Outer -->
             <div class="grid grid-cols-12 gap-4 px-5 mt-6">
                 <div class="col-span-12 lg:col-span-4">
@@ -208,10 +220,56 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
     </div>
+
+
+    <div class="bg-pink p-10">
+        <div class="lg:max-w-6xl lg:mx-auto pt-10">
+            <div class="grid grid-cols-12 gap-4 text-white">
+                <div class="col-span-12 pb-10">
+                    <h3 class = "text-6xl">getting here</h3>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-12 gap-4 text-white">
+                <div class="col-span-12 md:col-span-4">
+                    <div class="grid grid-cols-12 gap-4 text-white">
+                        <div class="col-span-12">
+                            <h4 class="font-bold text-xl">Maryville Location</h4>
+                            <p>1551 W Lamar Alexander Pkwy <br/> Maryville, TN 33781</p>
+                            <a href="<?php the_sub_field('button_link'); ?>">
+                                <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                    Launch Maps
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col-span-12">
+                            <h4 class="font-bold text-xl">Maryville Location</h4>
+                            <p>1551 W Lamar Alexander Pkwy <br/> Maryville, TN 33781</p>
+                            <a href="<?php the_sub_field('button_link'); ?>">
+                                <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                    Launch Maps
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <?php echo do_shortcode("[wpgmza id='1']"); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
 <?php
 get_footer();
