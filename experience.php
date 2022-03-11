@@ -233,7 +233,7 @@ get_header(); ?>
             </div>
 
 
-            <div class="grid grid-cols-12 gap-4 text-white">
+            <div class="grid grid-cols-12 gap-4 text-white z-20">
                 <div class="col-span-12 md:col-span-4">
                     <div class="grid grid-cols-12 gap-4 text-white">
                         <div class="col-span-12">
@@ -264,7 +264,28 @@ get_header(); ?>
     </div>
 
 
+    <div class="bg-green p-10 relative">
 
+        <div class="hidden lg:block absolute bottom-0 left-0 w-4/12">
+            <img src="https://easters-2022.local/wp-content/uploads/2022/03/bottom-form-corner.png" alt="">
+        </div>
+
+        <div class="lg:max-w-6xl lg:mx-auto pt-10">
+            <div class="grid grid-cols-12 gap-4 text-white">
+                <div class="col-span-12 lg:col-start-6 lg:col-span-6 pb-10">
+                    <h3 class = "text-3xl uppercase">New to the area?</h3>
+                    <h3 class = "text-3xl uppercase">Grab our free resource!</h3>
+                        <h3 class="text-2xl uppercase pb-5"><?php the_field('contact_title'); ?></h3>
+                        <?php if (have_posts()) : while (have_posts()) : the_post();
+                            the_content();
+                        endwhile;
+                        else: ?>
+                            <p>Sorry, no posts matched your criteria.</p>
+                        <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
