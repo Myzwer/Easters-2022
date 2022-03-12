@@ -58,13 +58,12 @@ get_header(); ?>
 
     <div class="bg-green relative">
         <div class="hidden lg:block absolute bottom-0 right-0 w-4/12">
-            <img src="https://easters-2022.local/wp-content/uploads/2022/03/Flower-Corner-1.png" alt="">
+            <img src="<?php the_field('right_corner_art'); ?>" alt="">
         </div>
         <div class="lg:mx-auto">
             <div class="grid grid-cols-12 gap-4 text-black">
                 <div class="col-span-12 lg:col-span-9 px-5 py-20 md:p-10 md:my-24">
-                    <h1 class="uppercase leading-relaxed text-5xl md:text-8xl xl:text-9xl text-white">Are you ready to
-                        experience life change?</h1>
+                    <h1 class="uppercase leading-relaxed text-5xl md:text-8xl xl:text-9xl text-white"><?php the_field('title'); ?></h1>
                 </div>
             </div>
         </div>
@@ -76,7 +75,7 @@ get_header(); ?>
                 <div class="col-span-12">
                     <div class="md:text-center">
                         <h1 class="text-white text-4xl uppercase">
-                            WHat to expect
+                            <?php the_field('banner_title'); ?>
                         </h1>
                     </div>
                 </div>
@@ -228,7 +227,7 @@ get_header(); ?>
         <div class="lg:max-w-6xl lg:mx-auto pt-10">
             <div class="grid grid-cols-12 gap-4 text-white">
                 <div class="col-span-12 pb-10">
-                    <h3 class = "text-6xl">getting here</h3>
+                    <h3 class="text-6xl"><?php the_field('gh_title'); ?></h3>
                 </div>
             </div>
 
@@ -236,24 +235,33 @@ get_header(); ?>
             <div class="grid grid-cols-12 gap-4 text-white z-20">
                 <div class="col-span-12 md:col-span-4">
                     <div class="grid grid-cols-12 gap-4 text-white">
-                        <div class="col-span-12">
-                            <h4 class="font-bold text-xl">Maryville Location</h4>
-                            <p>1551 W Lamar Alexander Pkwy <br/> Maryville, TN 33781</p>
-                            <a href="<?php the_sub_field('button_link'); ?>">
-                                <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
-                                    Launch Maps
-                                </button>
-                            </a>
-                        </div>
-                        <div class="col-span-12">
-                            <h4 class="font-bold text-xl">Maryville Location</h4>
-                            <p>1551 W Lamar Alexander Pkwy <br/> Maryville, TN 33781</p>
-                            <a href="<?php the_sub_field('button_link'); ?>">
-                                <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
-                                    Launch Maps
-                                </button>
-                            </a>
-                        </div>
+
+                        <?php if (have_rows('location_1')): ?>
+                            <?php while (have_rows('location_1')): the_row(); ?>
+                                <div class="col-span-12">
+                                    <h4 class="font-bold text-xl"><?php the_sub_field('location_name'); ?></h4>
+                                    <p><?php the_sub_field('address'); ?></p>
+                                    <a href="<?php the_sub_field('button_link'); ?>" target="_blank">
+                                        <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                            <?php the_sub_field('button_text'); ?>
+                                        </button>
+                                    </a>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php if (have_rows('location_2')): ?>
+                            <?php while (have_rows('location_2')): the_row(); ?>
+                                <div class="col-span-12">
+                                    <h4 class="font-bold text-xl"><?php the_sub_field('location_name'); ?></h4>
+                                    <p><?php the_sub_field('address'); ?></p>
+                                    <a href="<?php the_sub_field('button_link'); ?>" target="_blank">
+                                        <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
+                                            <?php the_sub_field('button_text'); ?>
+                                        </button>
+                                    </a>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="col-span-12 md:col-span-8">
@@ -267,29 +275,24 @@ get_header(); ?>
     <div class="bg-green p-10 relative">
 
         <div class="hidden lg:block absolute bottom-0 left-0 w-4/12">
-            <img src="https://easters-2022.local/wp-content/uploads/2022/03/bottom-form-corner.png" alt="">
+            <img src="<?php the_field('flower_photo'); ?>" alt="Decorative Flowers">
         </div>
 
         <div class="lg:max-w-6xl lg:mx-auto pt-10">
             <div class="grid grid-cols-12 gap-4 text-white">
                 <div class="col-span-12 lg:col-start-6 lg:col-span-6 pb-10">
-                    <h3 class = "text-3xl uppercase">New to the area?</h3>
-                    <h3 class = "text-3xl uppercase">Grab our free resource!</h3>
-                        <h3 class="text-2xl uppercase pb-5"><?php the_field('contact_title'); ?></h3>
-                        <?php if (have_posts()) : while (have_posts()) : the_post();
-                            the_content();
-                        endwhile;
-                        else: ?>
-                            <p>Sorry, no posts matched your criteria.</p>
-                        <?php endif; ?>
+                    <h3 class="text-3xl uppercase"><?php the_field('resource_title'); ?></h3>
+                    <h3 class="text-2xl capitalize pb-5"><?php the_field('resource_subtitle'); ?></h3>
+                    <?php if (have_posts()) : while (have_posts()) : the_post();
+                        the_content();
+                    endwhile;
+                    else: ?>
+                        <p>Sorry, no posts matched your criteria.</p>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
 
 
 <?php
