@@ -158,6 +158,23 @@ get_header(); ?>
         </div>
     </div>
 
+    <div class="bg-pink p-5 relative">
+
+        <div class="hidden lg:block absolute bottom-0 right-0 w-4/12">
+            <img src="<?php the_field('flower_photo'); ?>" alt="Decorative Flowers">
+        </div>
+
+        <div class="lg:max-w-6xl lg:mx-auto pt-10">
+            <div class="grid grid-cols-12 gap-4 text-white">
+                <div class="col-span-12 lg:col-span-6 pb-10">
+                    <h3 class="text-3xl uppercase"><?php the_field('resource_title'); ?></h3>
+                    <h3 class="text-2xl capitalize pb-5"><?php the_field('resource_subtitle'); ?></h3>
+                    <?php echo do_shortcode("[gravityform id='2']"); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="bg-white pb-10">
         <div class="lg:max-w-4xl lg:mx-auto pt-10">
@@ -165,7 +182,7 @@ get_header(); ?>
                 <?php if (have_rows('info_block_1')): ?>
                     <?php while (have_rows('info_block_1')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
-                            <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
+                            <h2 class="text-5xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
                             <?php if (get_sub_field('button_link')): ?>
                                 <a href="<?php the_sub_field('button_link'); ?>">
@@ -180,7 +197,7 @@ get_header(); ?>
                 <?php if (have_rows('info_block_2')): ?>
                     <?php while (have_rows('info_block_2')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
-                            <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
+                            <h2 class="text-5xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
                             <?php if (get_sub_field('button_link')): ?>
                                 <a href="<?php the_sub_field('button_link'); ?>">
@@ -196,7 +213,7 @@ get_header(); ?>
                 <?php if (have_rows('info_block_3')): ?>
                     <?php while (have_rows('info_block_3')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
-                            <h2 class="text-4xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
+                            <h2 class="text-5xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
                             <p><?php the_sub_field('copy'); ?></p>
                             <?php if (get_sub_field('button_link')): ?>
                                 <a href="<?php the_sub_field('button_link'); ?>">
@@ -222,12 +239,7 @@ get_header(); ?>
 
                 <div class="col-span-12 md:col-span-6">
                     <h3 class="text-2xl uppercase pb-5"><?php the_field('contact_title'); ?></h3>
-                    <?php if (have_posts()) : while (have_posts()) : the_post();
-                        the_content();
-                    endwhile;
-                    else: ?>
-                        <p>Sorry, no posts matched your criteria.</p>
-                    <?php endif; ?>
+                    <?php echo do_shortcode("[gravityform id='1']"); ?>
                 </div>
             </div>
         </div>
