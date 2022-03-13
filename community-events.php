@@ -47,7 +47,7 @@ get_header(); ?>
                                     </button>
                                 </a>
                             <?php endwhile; ?>
-                        <?php endif;  ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,15 @@ get_header(); ?>
         </div>
     </div>
 
-
+    <div class="bg-white">
+        <div class="lg:max-w-4xl lg:mx-auto pt-10">
+            <div class="col-span-12">
+                <h1 class="text-black text-xl">
+                    <?php the_field('main_copy'); ?>
+                </h1>
+            </div>
+        </div>
+    </div>
 
 
     <div class="bg-white pb-10">
@@ -92,9 +100,10 @@ get_header(); ?>
                     <?php while (have_rows('info_block_1')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
                             <h2 class="text-5xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
-                            <h3 class = "text-xl font-bold"><?php the_sub_field('location'); ?> | <?php the_sub_field('address'); ?></h3>
-                            <h3 class = "text-md font-bold pb-2"><?php the_sub_field('date'); ?> | <?php the_sub_field('time'); ?></h3>
-                            <p><?php the_sub_field('copy'); ?></p>
+                            <h3 class="text-xl font-bold"><?php the_sub_field('location'); ?>
+                                | <?php the_sub_field('address'); ?></h3>
+                            <h3 class="text-md font-bold pb-2"><?php the_sub_field('date'); ?>
+                                | <?php the_sub_field('time'); ?></h3>
                             <?php if (get_sub_field('button_link')): ?>
                                 <a href="<?php the_sub_field('button_link'); ?>">
                                     <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
@@ -110,9 +119,10 @@ get_header(); ?>
                     <?php while (have_rows('info_block_2')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
                             <h2 class="text-5xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
-                            <h3 class = "text-xl font-bold"><?php the_sub_field('location'); ?> | <?php the_sub_field('address'); ?></h3>
-                            <h3 class = "text-md font-bold pb-2"><?php the_sub_field('date'); ?> | <?php the_sub_field('time'); ?></h3>
-                            <p><?php the_sub_field('copy'); ?></p>
+                            <h3 class="text-xl font-bold"><?php the_sub_field('location'); ?>
+                                | <?php the_sub_field('address'); ?></h3>
+                            <h3 class="text-md font-bold pb-2"><?php the_sub_field('date'); ?>
+                                | <?php the_sub_field('time'); ?></h3>
                             <?php if (get_sub_field('button_link')): ?>
                                 <a href="<?php the_sub_field('button_link'); ?>">
                                     <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
@@ -128,9 +138,10 @@ get_header(); ?>
                     <?php while (have_rows('info_block_3')): the_row(); ?>
                         <div class="col-span-12 md:col-span-12 py-8">
                             <h2 class="text-5xl md:text-6xl"><?php the_sub_field('title'); ?></h2>
-                            <h3 class = "text-xl font-bold"><?php the_sub_field('location'); ?> | <?php the_sub_field('address'); ?></h3>
-                            <h3 class = "text-md font-bold pb-2"><?php the_sub_field('date'); ?> | <?php the_sub_field('time'); ?></h3>
-                            <p><?php the_sub_field('copy'); ?></p>
+                            <h3 class="text-xl font-bold"><?php the_sub_field('location'); ?>
+                                | <?php the_sub_field('address'); ?></h3>
+                            <h3 class="text-md font-bold pb-2"><?php the_sub_field('date'); ?>
+                                | <?php the_sub_field('time'); ?></h3>
                             <?php if (get_sub_field('button_link')): ?>
                                 <a href="<?php the_sub_field('button_link'); ?>">
                                     <button class="button mx-auto lg:mx-0 border-2 border-black text-black rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
