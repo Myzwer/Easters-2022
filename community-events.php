@@ -98,7 +98,7 @@ get_header(); ?>
 
             <!-- Outer -->
             <div class="grid grid-cols-12 gap-4 px-5">
-                <div class="col-span-12 lg:col-span-8">
+                <div class="col-span-12">
                     <!-- Inner -->
                     <div class="grid grid-cols-12 gap-4">
                         <?php if (have_rows('info_block_1')): ?>
@@ -123,30 +123,7 @@ get_header(); ?>
                         <?php if (have_rows('info_block_2')): ?>
                             <?php while (have_rows('info_block_2')): the_row(); ?>
                                 <div class="col-span-12">
-                                    <div class="bg-pink lg:h-56 p-5 rounded-xl shadow-xl text-white">
-                                        <h2 class="text-5xl md:text-3xl"><?php the_sub_field('title'); ?></h2>
-                                        <h3 class="text-xl font-bold"><?php the_sub_field('date'); ?> | <?php the_sub_field('time'); ?></h3>
-                                        <h3 class="text-md font-bold pb-2"><?php the_sub_field('location'); ?> | <?php the_sub_field('address'); ?></h3>
-                                        <?php if (get_sub_field('button_link')): ?>
-                                            <a href="<?php the_sub_field('button_link'); ?>">
-                                                <button class="button mx-auto lg:mx-0 border-2 border-white text-white rounded-full my-2 py-2 px-5 md:px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out z-5">
-                                                    <?php the_sub_field('button_text'); ?>
-                                                </button>
-                                            </a>
-                                        <?php endif; ?>
-                                    </div>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                    </div>
-                </div>
-
-                <div class="col-span-12 lg:col-span-4">
-                    <div class="grid grid-cols-12 gap-4">
-                        <?php if (have_rows('info_block_3')): ?>
-                            <?php while (have_rows('info_block_3')): the_row(); ?>
-                                <div class="col-span-12">
-                                    <div class="bg-green p-5 experience-height-lock rounded-xl shadow-xl text-white">
+                                    <div class="bg-green lg:h-56 p-5 rounded-xl shadow-xl text-white">
                                         <h2 class="text-5xl md:text-3xl"><?php the_sub_field('title'); ?></h2>
                                         <h3 class="text-xl font-bold"><?php the_sub_field('date'); ?> | <?php the_sub_field('time'); ?></h3>
                                         <h3 class="text-md font-bold pb-2"><?php the_sub_field('location'); ?> | <?php the_sub_field('address'); ?></h3>
