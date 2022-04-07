@@ -58,7 +58,7 @@ get_header(); ?>
     <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
             rgba(0, 0, 0, 0.45),
             rgba(0, 0, 0, 0.45)
-            ), url('<?php the_field('background_image'); ?>') center center;
+            ), url('<?php the_field('background_image'); ?>') center center;  background-repeat: no-repeat; background-size: cover;
             height: 60vh;">
         <div class="content-middle text-white text-center">
             <img class="content-middle w-11/12 md:w-4/12"
